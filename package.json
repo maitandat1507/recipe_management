@@ -1,0 +1,23 @@
+{
+  "name": "recipe_management",
+  "version": "1.0.0",
+  "description": "modern js",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.17.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maitandat1507/recipe_management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maitandat1507/recipe_management/issues"
+  },
+  "homepage": "https://github.com/maitandat1507/recipe_management#readme"
+}
