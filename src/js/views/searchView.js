@@ -62,7 +62,7 @@ const createButton = (page, type) => `
     </button>
 `;
 
-export const renderButtons = (page, numResults, resPerPage) => {
+const renderButtons = (page, numResults, resPerPage) => {
     const pages = Math.ceil(numResults / resPerPage);
 
     let button;
@@ -74,18 +74,22 @@ export const renderButtons = (page, numResults, resPerPage) => {
         button = `
             ${createButton(page, 'prev')}
             ${createButton(page, 'next')}
-        `
+        `;
     } else if (page === pages && pages > 1) {
         // Only button to go to prev page
         button = createButton(page, 'prev');
     }
 
-    elements.searchResPages.insertAdjacentHTML('beforeend', button);
+    elements.searchResPages.insertAdjacentHTML('beforebegin', button);
 };
 
 export const renderResults = (recipes, page = 2, resPerPage = 10) => {
-    const start = (page -1) * resPerPage;
+    // render results of current page
+    const start = (page - 1) * resPerPage;
     const end = page * resPerPage;
 
     recipes.slice(start, end).forEach(renderRecipe);
+
+    // render pagination buttons
+    renderButtons(page, recipes.length, resPerPage);
 };
