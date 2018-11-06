@@ -4,7 +4,8 @@
   "description": "modern js",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "fractional": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

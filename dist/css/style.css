@@ -241,8 +241,8 @@ body {
   .likes__link:hover {
     background-color: #F9F5F3;
     transform: translateY(-2px); }
-  .results__link--active,
-  .likes__link--active {
+  .results__list--active,
+  .likes__list--active {
     background-color: #F9F5F3; }
   .results__fig,
   .likes__fig {
