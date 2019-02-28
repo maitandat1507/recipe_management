@@ -1,4 +1,4 @@
-import uniqid from 'uniquid';
+import uniqid from 'uniqid';
 
 export default class List {
     constructor () {
@@ -26,6 +26,6 @@ export default class List {
     }
 
     updateCount(id, newCount) {
-        this.items.find(el => el.id ===id).count = newCount;
+        this.items.find(el => el.id === id).count = newCount;
     }
 }
