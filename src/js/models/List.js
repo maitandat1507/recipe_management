@@ -13,7 +13,7 @@ export default class List {
             ingredient
         }
 
-        this.item.push(item);
+        this.items.push(item);
         return item;
     }
 
