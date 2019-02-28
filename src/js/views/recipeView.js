@@ -113,6 +113,7 @@ export const renderRecipe = recipe => {
     `;
     elements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
+
 export const updateServingsIngredients = recipe => {
     // Update servings
     document.querySelector('.recipe__info-data--people').textContent = recipe.servings;
