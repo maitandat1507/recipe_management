@@ -41,7 +41,8 @@ const controlSearch = async () => {
             clearLoader();
             searchView.renderResults(state.search.result);
         } catch (err) {
-            alert('Songthing wrong with the search... :(');
+            console.log(err);
+            alert('Somethings wrong with the search... :(');
             clearLoader();
         }
     }
@@ -152,6 +153,11 @@ elements.shopping.addEventListener('click', e => {
 /**
  * LIKE CONTROLLER
  */
+
+// TESTING
+state.likes = new Likes();
+likesView.toggleLikeMenu(state.likes.getNumLikes());
+
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
@@ -169,8 +175,10 @@ const controlLike = () => {
         // Toggle the like button
         likesView.toggleLikeBtn(true);
 
-        // Add like to UI list 
-        console.log('Added!' + state.likes);
+        // Add like to UI list
+        likesView.renderLike(newLike);
+        console.log('Added!');
+        console.log(state.likes); 
 
     // User HAS liked current recipe
     } else {
@@ -181,8 +189,11 @@ const controlLike = () => {
         likesView.toggleLikeBtn(false);
 
         // Remove like to UI list 
-        console.log('Deleted!' + state.likes);
+        console.log('Deleted!');
+        console.log(state.likes);
     }
+
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
 }
 
 
